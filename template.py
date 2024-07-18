@@ -11,10 +11,17 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / 'package.json')
 
 externals_deps = {
+    "rxjs": "^7.5.6",
     "@youwol/rx-vdom": "^1.0.1",
-    "rxjs": "^7.5.6"
+    "@youwol/mkdocs-ts": "^0.5.2",
+    "@youwol/webpm-client": "^3.0.0",
+    "@youwol/logging": "^0.2.0",
 }
-in_bundle_deps = {}
+in_bundle_deps = {
+    # The next 2 are actually dev dependencies (only types required), included here to be installed by consuming libs.
+    "@youwol/vsf-core": "^0.3.2",
+    "@youwol/vsf-canvas": "^0.3.1",
+}
 dev_deps = {}
 
 template = Template(

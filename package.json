@@ -28,8 +28,13 @@
         ]
     },
     "dependencies": {
+        "rxjs": "^7.5.6",
         "@youwol/rx-vdom": "^1.0.1",
-        "rxjs": "^7.5.6"
+        "@youwol/mkdocs-ts": "^0.5.2",
+        "@youwol/webpm-client": "^3.0.0",
+        "@youwol/logging": "^0.2.0",
+        "@youwol/vsf-core": "^0.3.2",
+        "@youwol/vsf-canvas": "^0.3.1"
     },
     "devDependencies": {
         "@types/jest": "^29.5.6",
@@ -52,8 +57,11 @@
     },
     "webpm": {
         "dependencies": {
+            "rxjs": "^7.5.6",
             "@youwol/rx-vdom": "^1.0.1",
-            "rxjs": "^7.5.6"
+            "@youwol/mkdocs-ts": "^0.5.2",
+            "@youwol/webpm-client": "^3.0.0",
+            "@youwol/logging": "^0.2.0"
         },
         "aliases": []
     }

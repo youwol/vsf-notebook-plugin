@@ -1,1 +1,2 @@
-export * from './hello.view'
+export * from './display-factory'
+export * from './vsf-canvas-state'
