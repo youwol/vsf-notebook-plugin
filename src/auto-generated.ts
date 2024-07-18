@@ -82,7 +82,7 @@ const entries = {
 export const setup = {
     name:'@youwol/vsf-notebook-plugin',
         assetId:'QHlvdXdvbC92c2Ytbm90ZWJvb2stcGx1Z2lu',
-    version:'0.1.0',
+    version:'0.1.1-wip',
     shortDescription:"Visual Studio Flow plugin to assist with integration in @youwol/mkdocs-ts Notebooks.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/vsf-notebook-plugin&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/vsf-notebook-plugin',
@@ -128,7 +128,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/vsf-notebook-plugin#0.1.0~dist/@youwol/vsf-notebook-plugin/${entry.name}.js`
+            `@youwol/vsf-notebook-plugin#0.1.1-wip~dist/@youwol/vsf-notebook-plugin/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),

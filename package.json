@@ -1,7 +1,7 @@
 {
     "name": "@youwol/vsf-notebook-plugin",
     "description": "Visual Studio Flow plugin to assist with integration in @youwol/mkdocs-ts Notebooks.",
-    "version": "0.1.0",
+    "version": "0.1.1-wip",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/vsf-notebook-plugin#README.md",
     "main": "dist/@youwol/vsf-notebook-plugin.js",
