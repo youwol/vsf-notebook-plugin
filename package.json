@@ -1,0 +1,60 @@
+{
+    "name": "@youwol/vsf-notebook-plugin",
+    "description": "Visual Studio Flow plugin to assist with integration in @youwol/mkdocs-ts Notebooks.",
+    "version": "0.1.0-wip",
+    "author": "greinisch@youwol.com",
+    "homepage": "https://github.com/youwol/vsf-notebook-plugin#README.md",
+    "main": "dist/@youwol/vsf-notebook-plugin.js",
+    "types": "src/index.ts",
+    "scripts": {
+        "clean": "del-cli dist",
+        "auto-gen": "python template.py",
+        "build": "yarn build:dev",
+        "pre-build": "yarn clean",
+        "build:dev": "yarn pre-build && webpack --mode development",
+        "build:prod": "yarn pre-build && webpack --mode production",
+        "lint-check": "yarn lint-prettier-check && yarn lint-eslint-check",
+        "lint-prettier-check": "prettier --check ./src",
+        "lint-eslint-check": "eslint ./src",
+        "test": "jest -i",
+        "test-coverage": "jest -i --collect-coverage",
+        "doc": "typedoc",
+        "publish-npm-public": "yarn build:prod && yarn test-coverage && yarn publish --access public"
+    },
+    "prettier": "@youwol/prettier-config",
+    "eslintConfig": {
+        "extends": [
+            "@youwol"
+        ]
+    },
+    "dependencies": {
+        "@youwol/rx-vdom": "^1.0.1",
+        "rxjs": "^7.5.6"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.6",
+        "@types/node": "^20.11.19",
+        "@types/webpack": "^5.28.0",
+        "@youwol/eslint-config": "^1.2.1",
+        "@youwol/jest-preset": "^1.2.1",
+        "@youwol/prettier-config": "^1.2.1",
+        "@youwol/tsconfig": "^1.2.1",
+        "del-cli": "^5.1.0",
+        "isomorphic-fetch": "^3.0.0",
+        "ts-loader": "9.5.0",
+        "ts-node": "10.9.2",
+        "tsx": "4.7.1",
+        "typedoc": "^0.25.7",
+        "typescript": "5.3.3",
+        "webpack": "^5.89.0",
+        "webpack-bundle-analyzer": "^4.9.1",
+        "webpack-cli": "5.1.4"
+    },
+    "webpm": {
+        "dependencies": {
+            "@youwol/rx-vdom": "^1.0.1",
+            "rxjs": "^7.5.6"
+        },
+        "aliases": []
+    }
+}
